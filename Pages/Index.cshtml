@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Chat";
+}
+
+
+<div class="container">
+    <div class="row">
+        <label class="col-2">Usuario:</label>
+        <input class="col-4" type="text" id="txtusuario"/>
+    </div>
+
+    <div class="row">
+        <label class="col-2">Mensaje:</label>
+        <input class="col-4" type="text" id="txtmensaje" />
+    </div>
+
+
+    <div class="row">
+        <input type="button" id="btnenviar" value="enviar"/>
+    </div>
+
+    <div class="row">
+        TIEMPO EN CHAT:
+        <label id="lblDuracion">0</label>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <ul id="lstMensajes">
+
+    </ul>
+</div>
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/app/chat/chat.js"></script>
